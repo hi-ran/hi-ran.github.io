@@ -182,8 +182,8 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 4em;
-    letter-spacing: 5px;
+    font-size: 5em;
+    letter-spacing: 15px;
 }
 
 section.fa fa-download {
@@ -411,9 +411,7 @@ section.fa fa-download {
     color: #{{ site.color.primary }};
 }
 
-form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
-}
+
 
 footer {
     color: #fff;
