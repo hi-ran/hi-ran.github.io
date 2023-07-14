@@ -1,70 +1,66 @@
-$(function() {
 
-    $("input,textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
-            $.ajax({
-                url: "././mail/contact_me.php",
-                type: "POST",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
-                cache: false,
-                success: function() {
-                    // Success message
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
-                    $('#success > .alert-success')
-                        .append('</div>');
+// dot background //
+function getDocumentWidth() {
+    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+};
 
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
-                },
-                error: function() {
-                    // Fail message
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry, it seems that my mail server is not responding. Please try again later!");
-                    $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
-                },
-            })
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
+function getDocumentHeight() {
+    return Math.max(document.querySelector('#Stacks').clientHeight, window.innerHeight || 0)
+};
 
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
-});
+var canvas = document.getElementById('dotCanvas');
+var context = canvas.getContext('2d');
 
+var vw = getDocumentWidth(),
+    vh = getDocumentHeight();
 
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-    $('#success').html('');
-});
+window.addEventListener('resize', onResize, false);
+function onResize() {
+    vw = getDocumentWidth();
+    vh = getDocumentHeight();
+    resizeCanvas();
+}
+
+function resizeCanvas() {
+    canvas.width = vw;
+    canvas.height = vh;
+    drawDots();
+}
+resizeCanvas();
+
+// grid
+function drawGrid() {
+    var cellW = 10,
+        cellH = 10;
+
+    // vertical lines
+    for (var x = 0; x <= vw; x += cellW) {
+        context.moveTo(x, 0); // x, y
+        context.lineTo(x, vh);
+    }
+
+    // horizontal lines
+    for (var y = 0; y <= vh; y += cellH) {
+        context.moveTo(0, y); // x, y
+        context.lineTo(vw, y);
+    }
+
+    context.strokeStyle = "#cccccc";
+    context.stroke();
+}
+// drawGrid();
+
+// dots
+function drawDots() {
+    var r = 2.2,
+        cw = 40,
+        ch = 40;
+
+    for (var x = 20; x < vw; x += cw) {
+        for (var y = 20; y < vh; y += ch) {
+            context.fillStyle = 'rgba(255,255,255, 0.09)';
+            context.fillRect(x - r / 2, y - r / 2, r, r);
+        }
+    }
+}
+drawDots();

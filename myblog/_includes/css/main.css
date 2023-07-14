@@ -191,7 +191,7 @@ section.fa fa-download {
     background: #DFAAA9;
 }
 
-
+/* about-me */
 #PROFILE{
     margin: 25px auto 30px;
     padding: 0;
@@ -259,7 +259,7 @@ section.fa fa-download {
         padding-top: 75px;
     }
 }
-
+/* 끝 */
 #portfolio {
     background: #{{ site.color.primary }};
 }
@@ -376,7 +376,7 @@ section.fa fa-download {
     border-radius: 0;
     font-size: 1.5em;
     background: 0 0;
-    box-shadow: none!important;
+    box-shadow: non;
     resize: none;
 }
 
@@ -411,8 +411,69 @@ section.fa fa-download {
     color: #{{ site.color.primary }};
 }
 
+/* SKILLS */
+.subTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.subTitle span {
+    position: relative;
+    padding: 16px 80px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #df667f;
+    border: 10px solid #df667f;
+    border-radius: 55px;
+    box-shadow: 0 0 10px #DFAAA9;
+}
+
+.stack_container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+} 
+
+.stack-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 0 20px #DFAAA9; */
+}
+
+.stack-box img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.stack-title{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #2c3e50;
+}
 
 
+
+
+
+
+
+
+
+
+/* footer */
 footer {
     color: #fff;
 }
@@ -533,7 +594,7 @@ footer .footer-below {
 }
 
 .navbar-nav>.active>a {
-    background-color: #{{ site.color.secondary-dark }} !important;
+    background-color: #{{ site.color.secondary-dark }};
 }
 
 /* Fix modal mouse wheel issues */
