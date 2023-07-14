@@ -32,12 +32,12 @@ footer:
   copyright: HI-RAN
   location: Location
   social: Around the Web
-  credits: Credits
+  send: contact
 
 # Social networks usernames 
 social:
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/hi-ran
 
 # Postal address (add as many lines as necessary)
 address:
@@ -45,7 +45,8 @@ address:
   - line: Beverly Hills, CA 90210
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+send: '<a href="mailto:rlgofks4623@naver.com" style="font-weight: bold;  font-size: 2.2rem;"> SEND E-MAIL</a><br>
+rlgofks4623@naver.com'
 
 # Build settings
 markdown: kramdown
