@@ -15,10 +15,56 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
-            {% endif %}
+          <div class="Item_container">
+            <div class="wi wi0 visible">
+            <div class="Item_wrap">
+              <div class="IMG_wrap">
+                  <div class="IMG_main" onclick="mainImgClick(0,0)"><img
+                          src='/img/project1/0_0.png' alt='프로젝트 이미지'></div>
+                  <div class="IMG_sub_wrap">
+                      <div class="IMG_sub active" onclick="subImgClick(0,0)"><img
+                              src='/img/project1/0_0.png' alt='프로젝트 이미지'></div>
+                      <div class="IMG_sub" onclick="subImgClick(0,1)"><img
+                              src='/img/project1/0_1.png' alt='프로젝트 이미지'></div>
+                      <div class="IMG_sub" onclick="subImgClick(0,2, true)"><img 
+                              src='/img/project1/0_2.png' alt='프로젝트 이미지'></div>
+                      <div class="IMG_sub" onclick="subImgClick(0,3)"><img
+                          src='/img/project1/0_3.png' alt='프로젝트 이미지'></div>
+                      <div class="IMG_sub" onclick="subImgClick(0,4)"><img
+                          src='/img/project1/0_4.png' alt='프로젝트 이미지'></div>
+                  </div>
+              </div>
+              <div class="info_wrap">
+                  <div class="info_title">JongYeon's 개발 블로그</div>
+                  <div class="info_sub">7인 팀 프로젝트</div>
+                  <div class="info_sub">2023.02.20 ~ 2023.03.06 개발 2주</div>
+                  <div class="info_main">소개 <span onclick="moreButtonClick(0)">더보기</span>
+                      <div class="more_wrap">
+                          <p>···</p>
+                          소개2
+                      </div>
+                  </div>
+                  <ul class="tag_wrap">
+                      <li class="hashtag">#Spring Legacy</li>
+                      <li class="hashtag">#JPA</li>
+                      <li class="hashtag">#Mybatis</li>
+                      <li class="hashtag">#게시판 CRUD</li>
+                  </ul>
+                  <div class="button_wrap">
+                      <a href="https://github.com/kimjy97/devBlog" target="_black">
+                          <div class="more">GitHub</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="sizeUP">
+                <div class="top">
+                    <div class="close"></div>
+                </div>
+                <div class="ct"></div>
+            </div>
+          </div>
+          </div>
+        </div>
             <ul class="list-inline item-details">
               <!-- <div class="text-center">
       <a href="https://github.com/jeromelachaud/freelancer-theme" class="btn btn-lg btn-outline">
@@ -34,4 +80,5 @@
     </div>
   </div>
 </div>
+
 {% endfor %}

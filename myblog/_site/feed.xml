@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2023-07-15T01:52:31+09:00</updated>
+  <updated>2023-07-15T22:29:17+09:00</updated>
   <id>http://localhost:4000/</id>
 
   
@@ -23,7 +23,7 @@
       <published>2014-07-18T00:00:00+09:00</published>
       <updated>2014-07-18T00:00:00+09:00</updated>
       <id>http://localhost:4000/project-1</id>
-      <content type="html" xml:base="http://localhost:4000/"></content>
+      <content type="html" xml:base="http://localhost:4000/">&lt;p&gt;z&lt;/p&gt;</content>
 
       
       
@@ -42,7 +42,7 @@
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">z</summary>
       
 
       
@@ -50,12 +50,12 @@
     </entry>
   
     <entry>
-      <title type="html">안녕</title>
-      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="안녕" />
+      <title type="html">Project 2</title>
+      <link href="http://localhost:4000/" rel="alternate" type="text/html" title="Project 2" />
       <published>2014-07-17T00:00:00+09:00</published>
       <updated>2014-07-17T00:00:00+09:00</updated>
       <id>http://localhost:4000/project-2</id>
-      <content type="html" xml:base="http://localhost:4000/"></content>
+      <content type="html" xml:base="http://localhost:4000/">&lt;p&gt;z&lt;/p&gt;</content>
 
       
       
@@ -74,7 +74,7 @@
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">z</summary>
       
 
       
