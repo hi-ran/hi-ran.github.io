@@ -7,24 +7,24 @@ description: <div class="Item_container">
             <div class="wi wi1 visible">
             <div class="Item_wrap">
               <div class="IMG_wrap">
-                  <div class="IMG_main" onclick="mainImgClick(1,0)"><img
+                  <div class="IMG_main2" onclick="mainImgClick2(1,0)" ><img
                           src='/img/project/1_0.png' alt='프로젝트 이미지'></div>
                   <div class="IMG_sub_wrap">
-                      <div id="img-sub2" class="IMG_sub active" onclick="subImgClick(1,0)"><img
+                      <div class="IMG_sub2 active" onclick="subImgClick2(1,0)"><img
                               src='/img/project/1_0.png' alt='프로젝트 이미지'></div>
-                      <div id="img-sub2" class="IMG_sub" onclick="subImgClick(1,1)"><img
+                      <div class="IMG_sub2" onclick="subImgClick2(1,1)"><img
                               src='/img/project/1_1.png' alt='프로젝트 이미지'></div>
-                      <div id="img-sub2" class="IMG_sub" onclick="subImgClick(1,2)"><img 
+                      <div class="IMG_sub2" onclick="subImgClick2(1,2)"><img 
                               src='/img/project/1_2.png' alt='프로젝트 이미지'></div>
-                      <div id="img-sub2" class="IMG_sub" onclick="subImgClick(1,3)"><img
+                      <div class="IMG_sub2" onclick="subImgClick2(1,3)"><img
                               src='/img/project/1_3.png' alt='프로젝트 이미지'></div>
                   </div>
               </div>
               <div class="info_wrap">
                   <div class="info_title">JongYeon's 개발 블로그</div>
-                  <div class="info_sub">7인 팀 프로젝트</div>
-                  <div class="info_sub">2023.02.20 ~ 2023.03.06 개발 2주</div>
-                  <div class="info_main">소개 <span onclick="moreButtonClick(0)">더보기</span>
+                  <div class="info_sub_2">7인 팀 프로젝트</div>
+                  <div class="info_sub2">2023.02.20 ~ 2023.03.06 / 2주</div>
+                  <div class="info_main">소개 ➕<span onclick="moreButtonClick(1)">더보기</span>
                       <div class="more_wrap">
                           <p>···</p>
                           소개2
@@ -38,10 +38,14 @@ description: <div class="Item_container">
                       <li class="hashtag">#Python</li>
                   </ul>
                   <div class="button_wrap">
+                      <a href="" target="_black">
+                          <div class="more"><img src='/img/go.png'>발표자료</div>
+                      </a>
                       <a href="https://github.com/kimjy97/devBlog" target="_black">
-                          <div class="more">GitHub</div>
+                          <div class="more"><img src='/img/git.png'>GitHub</div>
                       </a>
                   </div>
+                  
               </div>
               <div class="sizeUP">
                 <div class="top">
@@ -51,4 +55,4 @@ description: <div class="Item_container">
               </div>
           </div>
 ---
-z
+

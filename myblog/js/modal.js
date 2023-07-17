@@ -61,14 +61,12 @@ const subImgClick2 = (e, index, m = false) => {
     $('.wi' + e + ' .IMG_sub2').removeClass('active');
     $('.wi' + e + ' .IMG_sub2').eq(index).addClass('active');
     if (m) {
-        //$('.wi' + e + ' .IMG_main').html(`<img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지' onclick="mainImgClick(${e}, ${index}, ${m})">`);
-        document.querySelector('.wi' + e + ' .IMG_main').outerHTML = `<div class="IMG_main" onclick="mainImgClick(${e}, ${index}, ${m})"><img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
+        document.querySelector('.wi' + e + ' .IMG_main2').outerHTML = `<div class="IMG_main2" onclick="mainImgClick(${e}, ${index}, ${m})"><img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
     } else {
-        //$('.wi' + e + ' .IMG_main').html(`<img src='/img/project/${e}_${index}.png' alt='프로젝트 이미지' onclick="mainImgClick(${e}, ${index}, ${m})">`);
-        document.querySelector('.wi' + e + ' .IMG_main').outerHTML = `<div class="IMG_main" onclick="mainImgClick(${e}, ${index}, ${m})"><img src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
+        document.querySelector('.wi' + e + ' .IMG_main2').outerHTML = `<div class="IMG_main2" onclick="mainImgClick(${e}, ${index}, ${m})"><img src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
     }
-    $('.wi' + e + ' .IMG_main img').css({ opacity: '0' });
-    $('.wi' + e + ' .IMG_main img').animate({ opacity: '1' }, 150);
+    $('.wi' + e + ' .IMG_main2 img').css({ opacity: '0' });
+    $('.wi' + e + ' .IMG_main2 img').animate({ opacity: '1' }, 150);
 }
 
 const mainImgClick = (e, index, m = false) => {

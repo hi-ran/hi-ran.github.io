@@ -7,7 +7,7 @@ description: <div class="Item_container">
             <div class="wi wi0 visible">
             <div class="Item_wrap">
               <div class="IMG_wrap">
-                  <div id="img-main1" class="IMG_main" onclick="mainImgClick(0,0)"><img
+                  <div class="IMG_main" onclick="mainImgClick(0,0)"><img
                           src='/img/project/0_0.png' alt='프로젝트 이미지'></div>
                   <div class="IMG_sub_wrap">
                       <div class="IMG_sub active" onclick="subImgClick(0,0)"><img
@@ -26,7 +26,7 @@ description: <div class="Item_container">
                   <div class="info_title">JongYeon's 개발 블로그</div>
                   <div class="info_sub">7인 팀 프로젝트</div>
                   <div class="info_sub">2023.02.20 ~ 2023.03.06 개발 2주</div>
-                  <div class="info_main">소개 <span onclick="moreButtonClick(0)">더보기</span>
+                  <div class="info_main">소개 ➕<span onclick="moreButtonClick(0)">더보기</span>
                       <div class="more_wrap">
                           <p>···</p>
                           소개2
@@ -36,11 +36,17 @@ description: <div class="Item_container">
                       <li class="hashtag">#Spring Legacy</li>
                       <li class="hashtag">#JSP</li>
                       <li class="hashtag">#Mybatis</li>
-                      <li class="hashtag">#게시판 CRUD</li>
+                      <li class="hashtag">#Oracle</li>
+                      <li class="hashtag">#AJAX</li>
                   </ul>
                   <div class="button_wrap">
                       <a href="https://github.com/kimjy97/devBlog" target="_black">
-                          <div class="more">GitHub</div>
+                          <a href="" target="_black">
+                          <div class="more"><img src='/img/go.png'>발표자료</div>
+                      </a>
+                      <a href="https://github.com/kimjy97/devBlog" target="_black">
+                          <div class="more"><img src='/img/git.png'>GitHub</div>
+                      </a>
                       </a>
                   </div>
               </div>
