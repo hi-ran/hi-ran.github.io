@@ -1,5 +1,12 @@
 body {
     overflow-x: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+img {
+    pointer-events: none;
 }
 
 p {
@@ -318,6 +325,9 @@ section.fa fa-download {
     font-size: 30px ;
 }
 
+.pdf-link{
+    font-size: 20px;
+}
 
 
 @media(max-width:767px) {
@@ -512,6 +522,12 @@ section.fa fa-download {
     height: 100%;
     transition: 300ms ease;
 }
+#img-main1{
+    border: 3.5px solid #febf00;
+}
+#img-main2{
+    border: 3.5px solid #febf00;
+}
 .IMG_main {
     position: relative;
     width: 100%;
@@ -533,7 +549,6 @@ section.fa fa-download {
     background-size: 60px 60px;
     color: white;
     opacity: 0;
-    filter: invert(100%) drop-shadow(0 0 2px rgba(255, 230, 0, 0.2));
     z-index: 10;
     transition: 200ms ease;
 }  
@@ -559,11 +574,17 @@ section.fa fa-download {
     display: flex;
     justify-content: space-between;
 }
+.IMG_sub2_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .IMG_sub {
     position: relative;
     width: 18%;
-    background-color: rgba(255, 230, 0, 0.2);
+    background-color: #febf00;
     aspect-ratio: 16/9;
     overflow: hidden;
     box-sizing: border-box;
@@ -571,12 +592,31 @@ section.fa fa-download {
     transition: 200ms ease;
 }
 .IMG_sub:hover {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 .IMG_sub.active {
-    border: 2.5px solid rgba(255, 255, 255, 0.2);
+    border: 3.5px solid rgba(255, 255, 255, 0.2);
 }
 .IMG_sub.active img {
+    filter: brightness(60%);
+}
+.IMG_sub2 {
+    position: relative;
+    width: 18%;
+    background-color: #008957;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2.5px solid #70ad47;
+    transition: 200ms ease;
+}
+.IMG_sub2:hover {
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+.IMG_sub2.active {
+    border: 3.5px solid rgba(255, 255, 255, 0.2);
+}
+.IMG_sub2.active img {
     filter: brightness(60%);
 }
 /* info */
@@ -644,11 +684,14 @@ section.fa fa-download {
 .button_wrap {
     position: relative;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 40px;
 }
 .more {
+    display: flex;
+    margin: 0 auto;
     position: relative;
     height: 38px;
     line-height: 38px;
@@ -666,13 +709,13 @@ section.fa fa-download {
 .more::before {
     position: absolute;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     top: 50%;
-    left: 12px;
+    left: -25%;
     transform: translateY(-50%);
     background: url(img/stack_icon/git.png) 50% 50% no-repeat;
-    background-size: 22px 22px;
+    background-size: 30px 30px;
     z-index: 10;
 }  
 .more.visible {
@@ -882,7 +925,7 @@ footer .footer-below {
 .scroll-top .btn:focus {
     outline: 0;
 }
-
+/* modal */
 .portfolio-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;

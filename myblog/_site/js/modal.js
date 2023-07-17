@@ -13,15 +13,6 @@ const changeItemEvent = (prev, next) => {
     });
 }
 
-// const resizeSizeUP = () => {
-//     const sizeUP = document.querySelector('.sizeUP');
-//     const ct = document.querySelector('.sizeUP .ct');
-    
-//     sizeUP.style.width = ct.offsetWidth + 'px';
-//     sizeUP.style.height = ct.offsetHeight + 'px';
-//   };
-  
-//   window.addEventListener('resize', resizeSizeUP);
 
 // 갤러리 함수
 
@@ -56,6 +47,19 @@ const moreButtonClick = (e) => {
 const subImgClick = (e, index, m = false) => {
     $('.wi' + e + ' .IMG_sub').removeClass('active');
     $('.wi' + e + ' .IMG_sub').eq(index).addClass('active');
+    if (m) {
+        //$('.wi' + e + ' .IMG_main').html(`<img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지' onclick="mainImgClick(${e}, ${index}, ${m})">`);
+        document.querySelector('.wi' + e + ' .IMG_main').outerHTML = `<div class="IMG_main" onclick="mainImgClick(${e}, ${index}, ${m})"><img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
+    } else {
+        //$('.wi' + e + ' .IMG_main').html(`<img src='/img/project/${e}_${index}.png' alt='프로젝트 이미지' onclick="mainImgClick(${e}, ${index}, ${m})">`);
+        document.querySelector('.wi' + e + ' .IMG_main').outerHTML = `<div class="IMG_main" onclick="mainImgClick(${e}, ${index}, ${m})"><img src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;
+    }
+    $('.wi' + e + ' .IMG_main img').css({ opacity: '0' });
+    $('.wi' + e + ' .IMG_main img').animate({ opacity: '1' }, 150);
+}
+const subImgClick2 = (e, index, m = false) => {
+    $('.wi' + e + ' .IMG_sub2').removeClass('active');
+    $('.wi' + e + ' .IMG_sub2').eq(index).addClass('active');
     if (m) {
         //$('.wi' + e + ' .IMG_main').html(`<img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지' onclick="mainImgClick(${e}, ${index}, ${m})">`);
         document.querySelector('.wi' + e + ' .IMG_main').outerHTML = `<div class="IMG_main" onclick="mainImgClick(${e}, ${index}, ${m})"><img class='mobileImg' src='/img/project/${e}_${index}.png' alt='프로젝트 이미지'></div>`;

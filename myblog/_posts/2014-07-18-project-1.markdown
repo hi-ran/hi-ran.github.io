@@ -1,8 +1,0 @@
----
-layout: default
-modal-id: 1
-img: first.png
-alt: imag
-description: 안녕
----
-z
