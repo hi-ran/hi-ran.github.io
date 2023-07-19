@@ -3,6 +3,7 @@ layout: default
 modal-1: 1
 img: first.png
 alt: imag
+frontTitle: 안녕
 description: <div class="Item_container">
             <div class="wi wi0 visible">
             <div class="Item_wrap">
@@ -42,9 +43,9 @@ description: <div class="Item_container">
                   <div class="button_wrap">
                       <a href="https://github.com/kimjy97/devBlog" target="_black">
                           <a href="" target="_black">
-                          <div class="more"><img src='/img/go.png'>발표자료</div>
+                          <div class="more"><img src='/img/go.png'>기능설명</div>
                       </a>
-                      <a href="https://github.com/kimjy97/devBlog" target="_black">
+                      <a href="https://github.com/KHHoldMyHand/HoldMyHand" target="_black">
                           <div class="more"><img src='/img/git.png'>GitHub</div>
                       </a>
                       </a>

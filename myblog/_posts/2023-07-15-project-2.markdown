@@ -7,7 +7,7 @@ description: <div class="Item_container">
             <div class="wi wi1 visible">
             <div class="Item_wrap">
               <div class="IMG_wrap">
-                  <div class="IMG_main2" onclick="mainImgClick2(1,0)" ><img
+                  <div class="IMG_main2" onclick="mainImgClick(1,0)" ><img
                           src='/img/project/1_0.png' alt='프로젝트 이미지'></div>
                   <div class="IMG_sub_wrap">
                       <div class="IMG_sub2 active" onclick="subImgClick2(1,0)"><img
@@ -39,9 +39,9 @@ description: <div class="Item_container">
                   </ul>
                   <div class="button_wrap">
                       <a href="" target="_black">
-                          <div class="more"><img src='/img/go.png'>발표자료</div>
+                          <div class="more"><img src='/img/go.png'>기능설명</div>
                       </a>
-                      <a href="https://github.com/kimjy97/devBlog" target="_black">
+                      <a href="https://github.com/HoldCredit/HoldCredit" target="_black">
                           <div class="more"><img src='/img/git.png'>GitHub</div>
                       </a>
                   </div>
