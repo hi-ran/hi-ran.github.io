@@ -332,9 +332,9 @@ section.fa fa-download {
 
 
 #portfolio .portfolio-item {
-
-    right: 0;
-    margin: 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -381,6 +381,75 @@ section.fa fa-download {
 
 #portfolio * {
     z-index: 2;
+}
+
+.portfolio-intro{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.portfolio-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.877);
+    font-weight: bold;
+    margin-top: 10px;
+    max-width: 1000px;
+}
+.title-main{
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    font-size: 53px;
+    color: white;
+    overflow: hidden;
+    animation: typing 2.5s steps(40) ;
+    white-space: nowrap;
+}
+@keyframes typing{
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+
+.portfolio-comment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; 
+    margin-top: 40px;
+    color: #2c3e50;
+    font-weight: bold;
+    background-color: #ffffff94;
+    max-width: 1000px;
+    padding: 40px 10px 17px 10px ;
+}
+.portfolio-target{
+    font-size: 37px;
+    margin-bottom: 20px;
+    color: #2b2b33f3;
+}
+.portfolio-content{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.project-title{
+    color: #2c3e50;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+.portfolio-flex-item:hover .project-title {
+    color: #492974;
 }
 
 @media(min-width:767px) {
@@ -607,9 +676,17 @@ border: 4px solid #008957;
 .info_sub, .info_sub_2 {
     font-size: 2.2rem;
     font-weight: bold;
+}
+.info_sub{
+    color: #febf00;
 }    
 .info_sub_2 {
     color: #008957;
+}
+.info_sub_1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2b2b339d;
 }
 .info_sub2 {
     font-size: 2rem;
@@ -642,6 +719,19 @@ border: 4px solid #008957;
     letter-spacing: 20px;
     text-align: center;
 }
+.more-text , .more-text2{
+    max-width: 1000px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.more-text2{
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-top: 50px;
+}
+.more-see{
+    margin-top: 20px;
+}
 .tag_wrap {
     display: flex;
     align-items: center;
@@ -650,6 +740,7 @@ border: 4px solid #008957;
     font-size: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .hashtag {
     display: flex;

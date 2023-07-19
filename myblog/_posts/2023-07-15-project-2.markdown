@@ -21,13 +21,15 @@ description: <div class="Item_container">
                   </div>
               </div>
               <div class="info_wrap">
-                  <div class="info_title">JongYeon's 개발 블로그</div>
-                  <div class="info_sub_2">7인 팀 프로젝트</div>
-                  <div class="info_sub2">2023.02.20 ~ 2023.03.06 / 2주</div>
+                  <div class="info_title">신용점수 산출 및 빅데이터 시각화</div>
+                  <div class="info_sub_2">5인 팀 프로젝트</div>
+                  <div class="info_sub2">2023.03.27 ~ 2023.06.26 / 3개월</div>
                   <div class="info_main">소개 ➕<span onclick="moreButtonClick(1)">더보기</span>
                       <div class="more_wrap">
                           <p>···</p>
-                          소개2
+                          <div class="more-text">
+                          1차 프로젝트를 통해 SpringMVC를 통한 웹 애플리케이션 개발과 데이터베이스 상호작용에 대한 기본적인 이해를 향상시킬 수 있었습니다. 또한, 실제 웹 애플리케이션 개발 과정에서 발생할 수 있는 문제를 해결하고 데이터의 일관성과 안정성을 유지하는 중요성을 깨닫게 되었습니다.
+                          </div>
                       </div>
                   </div>
                   <ul class="tag_wrap">

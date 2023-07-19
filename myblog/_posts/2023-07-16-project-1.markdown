@@ -3,7 +3,6 @@ layout: default
 modal-1: 1
 img: first.png
 alt: imag
-frontTitle: 안녕
 description: <div class="Item_container">
             <div class="wi wi0 visible">
             <div class="Item_wrap">
@@ -24,13 +23,21 @@ description: <div class="Item_container">
                   </div>
               </div>
               <div class="info_wrap">
-                  <div class="info_title">JongYeon's 개발 블로그</div>
+                  <div class="info_title">CRUD 기능을 활용한 게시판 구현</div>
                   <div class="info_sub">7인 팀 프로젝트</div>
-                  <div class="info_sub">2023.02.20 ~ 2023.03.06 개발 2주</div>
-                  <div class="info_main">소개 ➕<span onclick="moreButtonClick(0)">더보기</span>
+                  <div class="info_sub_1">2023.02.20 ~ 2023.03.06 / 개발 2주</div>
+                  <div class="info_main">
+                        <div class="more-text">
+                          Spring MVC 프레임워크를 활용하여<br> 웹 개발과 데이터베이스 상호작용에 주력하여 <br>게시판 CRUD 기능을 구현하였습니다.
+                        </div> 
+                        <div class="more-see"> 
+                         ➕<span onclick="moreButtonClick(0)">더보기</span>
+                        </div> 
                       <div class="more_wrap">
                           <p>···</p>
-                          소개2
+                          <div class="more-text2">
+                            
+                          </div>  
                       </div>
                   </div>
                   <ul class="tag_wrap">
