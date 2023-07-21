@@ -33,7 +33,7 @@ description: <div class="Item_container">
                         <div class="more-see"> 
                          ➕<span onclick="moreButtonClick(0)">더보기</span>
                         </div> 
-                      <div class="more_wrap">
+                        <div class="more_wrap">
                           <p>···</p>
                           <div class="more-text2">
                             
@@ -48,8 +48,7 @@ description: <div class="Item_container">
                       <li class="hashtag">#AJAX</li>
                   </ul>
                   <div class="button_wrap">
-                      <a href="https://github.com/kimjy97/devBlog" target="_black">
-                          <a href="" target="_black">
+                      <a href="img/first_project.pdf" target="_black">
                           <div class="more"><img src='/img/go.png'>기능설명</div>
                       </a>
                       <a href="https://github.com/KHHoldMyHand/HoldMyHand" target="_black">

@@ -119,3 +119,16 @@ for (let i = 0; i < 6; i++) {
         }
     });
 }
+/* hashtag 클릭시 내용표시  */
+function toggleContent() {
+    const tagInfos = document.getElementsByClassName('tag-info');
+    for (let i = 0; i < tagInfos.length; i++) {
+        tagInfos[i].style.display = 'none';
+    }
+
+    const clickedTag = event.target.id; // 클릭된 요소의 ID 가져오기
+    const contentToShow = document.getElementById(clickedTag);
+    if (contentToShow) {
+        contentToShow.style.display = 'block';
+    }
+}

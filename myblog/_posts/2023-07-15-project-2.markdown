@@ -24,23 +24,39 @@ description: <div class="Item_container">
                   <div class="info_title">신용점수 산출 및 빅데이터 시각화</div>
                   <div class="info_sub_2">5인 팀 프로젝트</div>
                   <div class="info_sub2">2023.03.27 ~ 2023.06.26 / 3개월</div>
-                  <div class="info_main">소개 ➕<span onclick="moreButtonClick(1)">더보기</span>
-                      <div class="more_wrap">
+                  <div class="info_main">
+                        <div class="more-text">
+                          1차 프로젝트보다 실무적인 측면을 고려하여,<br>
+                          하나의 폼에서 금융 정보를 입력 받아,<br>
+                          신용점수가 자동으로 계산되게 구현하였습니다.<br>
+                          <br>
+                          또한, 효과적인 의사결정을 위해<br>
+                          빅데이터를 정제하고 직관적으로 시각화하였습니다. 
+                        </div>
+                        <div class="more-see">
+                         ➕<span onclick="moreButtonClick(1)">더보기</span>
+                        </div>
+                        <div class="more_wrap">
                           <p>···</p>
-                          <div class="more-text">
-                          1차 프로젝트를 통해 SpringMVC를 통한 웹 애플리케이션 개발과 데이터베이스 상호작용에 대한 기본적인 이해를 향상시킬 수 있었습니다. 또한, 실제 웹 애플리케이션 개발 과정에서 발생할 수 있는 문제를 해결하고 데이터의 일관성과 안정성을 유지하는 중요성을 깨닫게 되었습니다.
-                          </div>
-                      </div>
+                          <div class="clickable" onclick="toggleContent()">아래 해시태그 클릭하세요</div>
+                          <div class="more-text2">
+                            {{#tagInfoList}}
+                                <div class="tag-info" id="{{tagId}}">
+                                <p>{{content}}</p>
+                                </div>
+                            {{/tagInfoList}}
+                            </div>
+                        </div>
                   </div>
                   <ul class="tag_wrap">
-                      <li class="hashtag">#Spring Boot</li>
-                      <li class="hashtag">#React</li>
-                      <li class="hashtag">#JPA</li>
-                      <li class="hashtag">#ELK</li>
-                      <li class="hashtag">#Python</li>
+                    <li class="hashtag" onclick="showTagInfo('spring-boot')">#Spring Boot</li>
+                    <li class="hashtag" onclick="showTagInfo('react')">#React</li>
+                    <li class="hashtag" onclick="showTagInfo('jpa')">#JPA</li>
+                    <li class="hashtag" onclick="showTagInfo('elk')">#ELK</li>
+                    <li class="hashtag" onclick="showTagInfo('python')">#Python</li>
                   </ul>
                   <div class="button_wrap">
-                      <a href="" target="_black">
+                      <a href="img/second_project.pdf" target="_black">
                           <div class="more"><img src='/img/go.png'>기능설명</div>
                       </a>
                       <a href="https://github.com/HoldCredit/HoldCredit" target="_black">
