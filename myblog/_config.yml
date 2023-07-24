@@ -7,20 +7,8 @@ title: Hi-ran
 intro: "창의적인 사고와 끊임없는 트렌드 탐색 능력을 갖춘 김해란입니다."
 skills: "Web Developer"
 email: rlgofks4623@naver.com
-url: https://hi-ran.github.io
 meta_author: HaeRan 
- 
 
-# Google webmaster tools
-google_verify:
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
