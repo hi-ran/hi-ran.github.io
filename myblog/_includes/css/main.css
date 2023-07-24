@@ -394,24 +394,10 @@ section.fa fa-download {
     max-width: 1000px;
 }
 .title-main{
-    display: inline-block;
-    content: "";
-    width: 100%;
-    height: 100%;
     font-size: 53px;
     color: white;
-    overflow: hidden;
-    animation: typing 2.5s steps(40) ;
-    white-space: nowrap;
 }
-@keyframes typing{
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-}
+
 
 .portfolio-comment{
     display: flex;
@@ -435,7 +421,7 @@ section.fa fa-download {
     margin-bottom: 20px;
 }
 .project-title{
-    color: #2c3e50;
+    color: #2c3e50d3;
     font-size: 45px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -443,9 +429,6 @@ section.fa fa-download {
 }
 .portfolio-flex-item:hover .project-title {
     color: #492974;
-}
-.tag-info {
-    display: none;
 }
 
 
@@ -799,6 +782,14 @@ border: 4px solid #008957;
 .more:hover {
     background-color: #635994b0;
 }
+
+#tagInfo, #tagInfo2{
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
   
 
 /* size up */

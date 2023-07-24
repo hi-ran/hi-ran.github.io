@@ -208,7 +208,7 @@
     <div class="portfolio-flex-row">
       
       <div id="portfolio-box" class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-" class="portfolio-link" data-toggle="modal">
+        <a href="#portfolioModal-1" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -438,7 +438,7 @@
 </div>
   <!-- Portfolio Modals -->
 
-<div class="portfolio-modal modal fade" id="portfolioModal-" tabindex="-1" role="dialog"
+<div class="portfolio-modal modal fade" id="portfolioModal-1" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
@@ -453,20 +453,79 @@
           <div class="modal-body">
             <h2>Project 1</h2>
             <hr class="star-primary">
-            <div><div class="Item_container"> <div class="wi wi0 visible"> <div class="Item_wrap"> <div class="IMG_wrap"> <div class="IMG_main" onclick="mainImgClick(0,0)"><img src='/img/project/0_0.png' alt='프로젝트 이미지'></div> <div class="IMG_sub_wrap"> <div class="IMG_sub active" onclick="subImgClick(0,0)"><img src='/img/project/0_0.png' alt='프로젝트 이미지'></div> <div class="IMG_sub" onclick="subImgClick(0,1)"><img src='/img/project/0_1.png' alt='프로젝트 이미지'></div> <div class="IMG_sub" onclick="subImgClick(0,2)"><img src='/img/project/0_2.png' alt='프로젝트 이미지'></div> <div class="IMG_sub" onclick="subImgClick(0,3)"><img src='/img/project/0_3.png' alt='프로젝트 이미지'></div> <div class="IMG_sub" onclick="subImgClick(0,4)"><img src='/img/project/0_4.png' alt='프로젝트 이미지'></div> </div> </div> <div class="info_wrap"> <div class="info_title">CRUD 기능을 활용한 게시판 구현</div> <div class="info_sub">7인 팀 프로젝트</div> <div class="info_sub_1">2023.02.20 ~ 2023.03.06 / 개발 2주</div> <div class="info_main"> <div class="more-text"> Spring MVC 프레임워크를 활용하여<br> 웹 개발과 데이터베이스 상호작용에 주력하여 <br>게시판 CRUD 기능을 구현하였습니다. </div> <div class="more-see"> ➕<span onclick="moreButtonClick(0)">더보기</span> </div> <div class="more_wrap"> <p>···</p> <div class="more-text2">
-</div> </div> </div> <ul class="tag_wrap"> <li class="hashtag">#Spring Legacy</li> <li class="hashtag">#JSP</li> <li class="hashtag">#Mybatis</li> <li class="hashtag">#Oracle</li> <li class="hashtag">#AJAX</li> </ul> <div class="button_wrap"> <a href="img/first_project.pdf" target="_black"> <div class="more"><img src='/img/go.png'>기능설명</div> </a> <a href="https://github.com/KHHoldMyHand/HoldMyHand" target="_black"> <div class="more"><img src='/img/git.png'>GitHub</div> </a> </a> </div> </div> <div class="sizeUP"> <div class="top"> <div class="close-size"></div> </div> <div class="ct"></div> </div> </div></div>
-          </div>
+            <div>
+              <div class="Item_container">
+    <div class="wi wi0 visible">
+        <div class="Item_wrap">
+            <div class="IMG_wrap">
+                <div class="IMG_main" onclick="mainImgClick(0,0)"><img src='/img/project/0_0.png' alt='프로젝트 이미지'></div>
+                <div class="IMG_sub_wrap">
+                    <div class="IMG_sub active" onclick="subImgClick(0,0)"><img src='/img/project/0_0.png'
+                            alt='프로젝트 이미지'></div>
+                    <div class="IMG_sub" onclick="subImgClick(0,1)"><img src='/img/project/0_1.png' alt='프로젝트 이미지'>
+                    </div>
+                    <div class="IMG_sub" onclick="subImgClick(0,2)"><img src='/img/project/0_2.png' alt='프로젝트 이미지'>
+                    </div>
+                    <div class="IMG_sub" onclick="subImgClick(0,3)"><img src='/img/project/0_3.png' alt='프로젝트 이미지'>
+                    </div>
+                    <div class="IMG_sub" onclick="subImgClick(0,4)"><img src='/img/project/0_4.png' alt='프로젝트 이미지'>
+                    </div>
+                </div>
+            </div>
+            <div class="info_wrap">
+                <div class="info_title">CRUD 기능을 활용한 게시판 구현</div>
+                <div class="info_sub">7인 팀 프로젝트</div>
+                <div class="info_sub_1">2023.02.20 ~ 2023.03.06 / 개발 2주</div>
+                <div class="info_main">
+                    <div class="more-text">
+                        Spring MVC 프레임워크를 활용하여<br> 웹 개발과 데이터베이스 상호작용에 주력하여 <br>게시판 CRUD 기능을 구현하였습니다.
+                    </div>
+                    <div class="more-see">
+                        ➕<span onclick="moreButtonClick(0)">더보기</span>
+                    </div>
+                    <div class="more_wrap">
+                        <p>···</p>
+                        <div class="clickable" onclick="toggleContent()">아래 해시태그 클릭하세요</div>
+                        <div id="tagInfo"></div>
+                    </div>
+                </div>
+                <ul class="tag_wrap" id="tagList">
+                    <li class="hashtag" onclick="showTagInfo('spring-legacy')">#Spring Legacy</li>
+                    <li class="hashtag" onclick="showTagInfo('jsp')">#JSP</li>
+                    <li class="hashtag" onclick="showTagInfo('ajax')">#AJAX</li>
+                    <li class="hashtag" onclick="showTagInfo('mybatis')">#Mybatis</li>
+                    <li class="hashtag" onclick="showTagInfo('oracle')">#Oracle</li>
+                </ul>
+                <div class="button_wrap">
+                    <a href="img/first_project.pdf" target="_black">
+                        <div class="more"><img src='/img/go.png'>기능설명</div>
+                    </a>
+                    <a href="https://github.com/KHHoldMyHand/HoldMyHand" target="_black">
+                        <div class="more"><img src='/img/git.png'>GitHub</div>
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <div class="sizeUP">
+                <div class="top">
+                    <div class="close-size"></div>
+                </div>
+                <div class="ct"></div>
+            </div>
         </div>
-            <ul class="list-inline item-details"></ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+    </div>
+</div>
+              
+            </div>
           </div>
-        </div>
+          <ul class="list-inline item-details"></ul>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+            Close</button>
+          </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog"
   aria-hidden="true">
@@ -483,21 +542,78 @@
           <div class="modal-body">
             <h2>Project 2</h2>
             <hr class="star-primary">
-            <div><div class="Item_container"> <div class="wi wi1 visible"> <div class="Item_wrap"> <div class="IMG_wrap"> <div class="IMG_main2" onclick="mainImgClick(1,0)" ><img src='/img/project/1_0.png' alt='프로젝트 이미지'></div> <div class="IMG_sub_wrap"> <div class="IMG_sub2 active" onclick="subImgClick2(1,0)"><img src='/img/project/1_0.png' alt='프로젝트 이미지'></div> <div class="IMG_sub2" onclick="subImgClick2(1,1)"><img src='/img/project/1_1.png' alt='프로젝트 이미지'></div> <div class="IMG_sub2" onclick="subImgClick2(1,2)"><img src='/img/project/1_2.png' alt='프로젝트 이미지'></div> <div class="IMG_sub2" onclick="subImgClick2(1,3)"><img src='/img/project/1_3.png' alt='프로젝트 이미지'></div> </div> </div> <div class="info_wrap"> <div class="info_title">신용점수 산출 및 빅데이터 시각화</div> <div class="info_sub_2">5인 팀 프로젝트</div> <div class="info_sub2">2023.03.27 ~ 2023.06.26 / 3개월</div> <div class="info_main"> <div class="more-text"> 1차 프로젝트보다 실무적인 측면을 고려하여,<br> 하나의 폼에서 금융 정보를 입력 받아,<br> 신용점수가 자동으로 계산되게 구현하였습니다.<br> <br> 또한, 효과적인 의사결정을 위해<br> 빅데이터를 정제하고 직관적으로 시각화하였습니다. </div> <div class="more-see"> ➕<span onclick="moreButtonClick(1)">더보기</span> </div> <div class="more_wrap"> <p>···</p> <div class="clickable" onclick="toggleContent()">아래 해시태그 클릭하세요</div> <div class="more-text2"> {{#tagInfoList}} <div class="tag-info" id="{{tagId}}"> <p>{{content}}</p> </div> {{/tagInfoList}} </div> </div> </div> <ul class="tag_wrap"> <li class="hashtag" onclick="showTagInfo('spring-boot')">#Spring Boot</li> <li class="hashtag" onclick="showTagInfo('react')">#React</li> <li class="hashtag" onclick="showTagInfo('jpa')">#JPA</li> <li class="hashtag" onclick="showTagInfo('elk')">#ELK</li> <li class="hashtag" onclick="showTagInfo('python')">#Python</li> </ul> <div class="button_wrap"> <a href="img/second_project.pdf" target="_black"> <div class="more"><img src='/img/go.png'>기능설명</div> </a> <a href="https://github.com/HoldCredit/HoldCredit" target="_black"> <div class="more"><img src='/img/git.png'>GitHub</div> </a> </div>
-</div> <div class="sizeUP"> <div class="top"> <div class="close-size"></div> </div> <div class="ct"></div> </div> </div></div>
+            <div>
+              <div class="Item_container">
+  <div class="wi wi1 visible">
+    <div class="Item_wrap">
+      <div class="IMG_wrap">
+        <div class="IMG_main2" onclick="mainImgClick(1,0)"><img src='/img/project/1_0.png' alt='프로젝트 이미지'></div>
+        <div class="IMG_sub_wrap">
+          <div class="IMG_sub2 active" onclick="subImgClick2(1,0)"><img src='/img/project/1_0.png' alt='프로젝트 이미지'></div>
+          <div class="IMG_sub2" onclick="subImgClick2(1,1)"><img src='/img/project/1_1.png' alt='프로젝트 이미지'></div>
+          <div class="IMG_sub2" onclick="subImgClick2(1,2)"><img src='/img/project/1_2.png' alt='프로젝트 이미지'></div>
+          <div class="IMG_sub2" onclick="subImgClick2(1,3)"><img src='/img/project/1_3.png' alt='프로젝트 이미지'></div>
+        </div>
+      </div>
+      <div class="info_wrap">
+        <div class="info_title">신용점수 산출 및 빅데이터 시각화</div>
+        <div class="info_sub_2">5인 팀 프로젝트</div>
+        <div class="info_sub2">2023.03.27 ~ 2023.06.26 / 3개월</div>
+        <div class="info_main">
+          <div class="more-text">
+            1차 프로젝트보다 실무적인 측면을 고려하여,<br>
+            하나의 폼에서 금융 정보를 입력 받아,<br>
+            신용점수가 자동으로 계산되게 구현하였습니다.<br>
+            <br>
+            또한, 효과적인 의사결정을 위해<br>
+            빅데이터를 정제하고 직관적으로 시각화하였습니다.
+          </div>
+          <div class="more-see">
+            ➕<span onclick="moreButtonClick(1)">더보기</span>
+          </div>
+          <div class="more_wrap">
+            <p>···</p>
+            <div class="clickable" onclick="toggleContent()">아래 해시태그 클릭하세요</div>
+            <div id="tagInfo2"></div>
           </div>
         </div>
-            <ul class="list-inline item-details"></ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
-          </div>
+        <ul class="tag_wrap" id="tagList">
+          <li class="hashtag" onclick="showTagInfo2('spring-boot')">#Spring Boot</li>
+          <li class="hashtag" onclick="showTagInfo2('react')">#React</li>
+          <li class="hashtag" onclick="showTagInfo2('jpa')">#JPA</li>
+          <li class="hashtag" onclick="showTagInfo2('elk')">#ELK</li>
+          <li class="hashtag" onclick="showTagInfo2('python')">#Python</li>
+        </ul>
+        <div class="button_wrap">
+          <a href="img/second_project.pdf" target="_black">
+            <div class="more"><img src='/img/go.png'>기능설명</div>
+          </a>
+          <a href="https://github.com/HoldCredit/HoldCredit" target="_black">
+            <div class="more"><img src='/img/git.png'>GitHub</div>
+          </a>
         </div>
+
+      </div>
+      <div class="sizeUP">
+        <div class="top">
+          <div class="close-size"></div>
+        </div>
+        <div class="ct"></div>
       </div>
     </div>
   </div>
 </div>
-
-
+              
+            </div>
+          </div>
+          <ul class="list-inline item-details"></ul>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+            Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- jQuery Version 1.11.0 -->
 <script src=" js/jquery-1.11.0.js"></script>

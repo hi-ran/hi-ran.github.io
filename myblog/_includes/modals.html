@@ -15,17 +15,19 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
-            <div>{{post.description}}</div>
+            <div>{% if post.modal-id == 1 %}
+              {% include modal_1.html %}
+              {% elsif post.modal-id == 2 %}
+              {% include modal_2.html %}
+              {% endif %}
+            </div>
           </div>
-        </div>
-            <ul class="list-inline item-details"></ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+          <ul class="list-inline item-details"></ul>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+            Close</button>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-
 {% endfor %}

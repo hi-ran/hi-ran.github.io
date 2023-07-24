@@ -21,19 +21,3 @@
 //       animateTitle();
 //     }
 //   });
-const titleMain = document.querySelector('.title-main');
-    let isAnimated = false;
-
-    function animateTitle() {
-      titleMain.style.animation = 'typing 2.5s steps(40)';
-      isAnimated = true;
-    }
-
-    window.addEventListener('scroll', () => {
-      const elementPosition = titleMain.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight* 6 / 10; // 화면의 1/3 위치에서 나타나도록 설정
-
-      if (elementPosition < screenPosition && !isAnimated) {
-        animateTitle();
-      }
-    });
