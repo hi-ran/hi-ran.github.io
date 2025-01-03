@@ -17,31 +17,6 @@ color:
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
 
-# Footer settings
-footer:
-  copyright: HI-RAN
-  hashtag: Hashtag
-  social: Around the Web
-  send: contact
-
-# Social networks usernames 
-social:
-  - title: github
-    url: https://github.com/hi-ran
-
-# hashtag
-hashtag:
-  - line:
-      - "# 도전적인"
-      - "# 집요함"
-  - line:
-      - "# 열정있는"
-      - "# 세심함"
-  
-
-# Credits content
-send: '<a href="mailto:rlgofks4623@naver.com" style="font-weight: bold;  font-size: 2.2rem;"> SEND E-MAIL</a><br>
-rlgofks4623@naver.com'
 
 # Build settings
 markdown: kramdown
