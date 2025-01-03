@@ -1,7 +1,0 @@
----
-published: true
-layout: default
-modal-id: 1
-img: first.png
-alt: imag
----
