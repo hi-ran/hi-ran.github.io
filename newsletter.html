@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포트폴리오 - HI RAN</title>
+<style>
+  body {
+      margin: 0;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      scroll-behavior: smooth;
+      background-color: hsl(0, 0%, 99%);
+  }
+
+  /* GNB */
+  header {
+      background-color: #2d3e50;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+  .logo {
+      font-weight: bold;
+      font-size: 30px;
+  }
+  nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      font-size: 20px;
+  }
+  nav a:hover {
+      color: #DFAAA9;
+  }
+
+  /* 섹션 */
+  section {
+      padding: 5% 15% 5% 15%;
+      scroll-margin-top: 100px;
+  }
+
+  /* newsletter-section */
+  .newsletter-section {
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      gap: 40px;
+      height: 500px;           /* 섹션 고정 높이 */
+      overflow: hidden;        /* 넘치는 영역 잘림 */
+      position: relative;
+  }
+
+  /* 왼쪽 텍스트 */
+  .newsletter-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* 상단과 하단 구분 */
+      height: 100%;
+  }
+
+  .text-top h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      color: #000;
+  }
+  .text-top h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0;
+  }
+
+  .text-bottom p {
+      font-size: 16px;
+      margin: 0 0 20px 0;
+      color: #555;
+  }
+  .text-bottom .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #7B82F2;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      align-self: flex-start; /* 왼쪽 하단 배치 */
+  }
+
+  /* 오른쪽 이미지 */
+  .newsletter-img {
+      height: 100%;
+      overflow: hidden;         /* 넘치는 이미지 잘림 */
+      position: relative;
+  }
+  .newsletter-img img {
+      width: auto;              /* 가로 크기 고정 X */
+      height: 120%;            
+      display: block;
+      object-fit: none;
+      object-fit: cover;          /* 이미지 비율 유지 X, 잘림 */
+      /* transform: translateX(20%); 오른쪽 살짝 잘림 */
+  }
+</style>
+</head>
+
+<body>
+<header>
+    <div class="logo">HI - RAN</div>
+    <nav>
+        <a href="profile.html">PROFILE</a>
+        <a href="profile.html#projects">PROJECT</a>
+        <a href="#etc">@@@</a>
+    </nav>
+</header>
+
+<section class="newsletter-section">
+  <!-- 왼쪽 텍스트 -->
+  <div class="newsletter-text">
+    <div class="text-top">
+      <h2>NEWSLETTER</h2>
+      <h1>메인 텍스트 예시<br>여기에 내용을 넣으세요<br>여러 줄 가능</h1>
+    </div>
+    <div class="text-bottom">
+      <p>서브 텍스트 예시, 여기에 추가 설명을 넣을 수 있습니다.</p>
+      <a href="#" class="btn">읽어보기</a>
+    </div>
+  </div>
+
+  <!-- 오른쪽 카드 영역 -->
+  <div class="newsletter-img">
+      <img src="img/card1.png" alt="Card 1">
+  </div>
+</section>
+
+</body>
+</html>
