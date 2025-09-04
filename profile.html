@@ -1,517 +1,174 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>포트폴리오 - HI RAN</title>
-<style>
-    body {
-        margin: 0;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        scroll-behavior: smooth;
-        background-color: hsl(0, 0%, 99%);
-    }
-
-
-    /* GNB */
-    header {
-        background-color: #2d3e50;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 60px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    .logo {
-        font-weight: bold;
-        font-size: 30px;
-    }
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 25px;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    nav a:hover {
-        color: #DFAAA9;
-    }
-
-    /* 섹션 */
-    section {
-        padding: 5% 15% 5% 15%;
-        /* min-height: 70vh; */
-        scroll-margin-top: 100px;
-    }
-
-/* 프로필 CSS */
-/* 프로필 카드 */
-.profile-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  overflow:hidden;
-  padding: 30px;
-  margin-bottom: 50px;
-}
-
-.profile-left {
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-right: 20px;
-  border-right: 1px solid #e0e0e0;
-}
-
-.profile-image-placeholder {
-  width: 100%;        /* 부모 width에 맞춰 자동 조정 */
-  height: auto;       /* 비율 유지 */
-  max-width: 250px;
-}
-
-.profile-details {
-  text-align: center;
-}
-
-.profile-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-
-.profile-right {
-  flex: 1;
-  padding-left: 30px;
-}
-
-.profile-heading {
-  font-size: 40px;
-  text-align: center;
-  color: #2C3E50;
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.profile-stats {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 35px;
-  font-weight: bold;
-  color: #333;
-  display: block;
-  line-height: 1;
-  margin-bottom: 5px;
-}
-
-.stat-label {
-  font-size: 20px;
-  font-weight: 500;
-  color: #888;
-}
-
-.profile-content-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.content-row {
-  display: flex;
-  gap: 10px;
-}
-
-.content-block {
-  background-color: #f0f0f0;
-  border-radius: 6px;
-  height: 40px;
-}
-
-.content-block.large {
-  flex: 2;
-}
-
-.content-block.small {
-  flex: 1;
-}
-
- /*하이라이트 */   
-.highlights{
-  font-size: 35px;
-  font-weight: 700;
-  color: #37352F;
-  margin-bottom: 100px;
-}
-.hi-label{
-  font-size: 25px;
-  font-weight: 500;
-  color: #37352F;
-}
-
-/* 프로젝트 CSS  */
-/* 그리드 위치 설정 */
-#projects{
- overflow:hidden;
- height: 100%;
-}
-.grid{
-    display:grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    min-height: 80vh; 
-  }
-
-  .left-top   { grid-column: 1 / span 3; grid-row: 1; }
-  .left-bottom{ grid-column: 1 / span 3; grid-row: 2; }
-  .right-left  { grid-column: 4/ span 2; grid-row: 1/ span 2; }
-  .right-right{grid-column: 6/ span 2; grid-row: 1/ span 2; }
-
-
-  /* 파트 섹션 설정*/
-  .card{
-    background:white;
-    border-radius:10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 3px solid #00194ca7;
-    padding:16px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-
-    
-    
-  }
-
-/* 가로 카드 */
-  .wide {
-    flex: 1 1 auto;; 
-    display:flex;
-    gap:12px;
-  }
-  .wide .img{
-    flex:0 0 50%;
-    background:#e6e6e6;
-    border-radius:10px;
-  }
-
-  .wide .meta {
-  flex: 1; 
-  display: flex;
-  flex-direction: column;
-}
-
-.wide .btn {
-/* position: static; */
-/* align-self: stretch; */
- margin-top: auto;
-  padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 16px); /* 화면 크기에 따라 줄어듦 */
-  font-size: clamp(12px, 1.5vw, 16px);
-}
-
-
-
-
-  .wide .title{font-weight:700;margin-bottom:6px;font-size: clamp(14px, 2vw, 22px)}
-  .wide .desc{color:#6b7280;font-size:13px;line-height:1.3; margin-bottom: 10px;}
-
-  /* 세로 카드*/
-  .block{
-    flex:1; 
-    display:flex;
-    flex-direction:column;
-    gap:6px;
-    background:#f0f0f0;
-    border-radius:10px;
-    padding:10px;
-  }
-
-  .block .thumb{height:100%;background:#d9d9d9;border-radius:8px}
-  .title{font-weight:700;margin-top:6px;}
-  .desc{font-size:13px;color:#555}
-
-  article:hover .btn {
-  background: #7B82F2;   /* 버튼 색 변경 */
-  transform: translateY(-3px);
-}
-
-
-  
-  /* 버튼 */
-  .btn{
-    background:#283286;
-    color:#fff;
-    padding:10px 16px;
-    border-radius:90px;
-    text-decoration:none;
-    font-weight:600;
-    margin-top: auto;
-    text-align:center;
-  }
-  .btn span{
-    display:inline-block;
-    width:26px;
-    height:26px;
-    text-align:center;
-    border-radius:999px;
-    background:rgba(255,255,255,0.12)}
-    
-  
-
-/*하이라이트 */   
-.prj{
-  font-size: 35px;
-  font-weight: 700;
-  color: #37352F;
-  margin-bottom: 15px;
-  scroll-margin-top: 80px;
-}
-.one, .two {
-  display: none; /* 기본 숨김 */
-}
-
-
-/* 반응형 */
-@media (max-width: 900px) {
-  .profile-image-placeholder {
-   width: 100%;      
-}
-  .profile-left {
-    flex: 0 0 40%;    
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .profile-right {
-    display: block;   /* 숨기지 않음 */
-    flex: 1 1 60%;    /* 우측 영역 나머지 70% */
-  }
-   .hi-label{
-   display: -webkit-box;        /* flexbox 기반이 아닌 다중줄 클램프용 */
-  -webkit-box-orient: vertical; 
-  -webkit-line-clamp: 2;       /* 최대 2줄 */
-  overflow: hidden;             /* 넘치는 내용 숨김 */
-  text-overflow: ellipsis;      /* 끝에 … 표시 */
-  line-height: 1.3;   
-}
-
- .right-left, .right-right {
-        display: none; /* 중간 크기 화면에서 숨기기 */
-    } 
-  
-    .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 15px;
-  }
-
-  .left-top {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .one {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex; /* wide 구조이므로 flex 유지 */
-  }
-
-  .left-bottom {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-  }
-}
-
-@media (max-width: 600px) {
-  header nav {
-     display: none;
-  }
-.profile-left {
-    display: none; /* 왼쪽 프로필 이미지 숨김 */
-  }
-  .profile-right {
-    padding: 0%;
-    flex: 1 1 100%; /* 오른쪽 영역을 전체 폭으로 확장 */
-  }
-}
-
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오 - HI RAN</title>
+  <link rel="stylesheet" href="css/profile.css">
 </head>
 
 <!-- HTML 시작 -->
+
 <body>
   <header>
-      <div class="logo">HI - RAN</div>
-      <nav>
-          <a href="#profile">PROFILE</a>
-          <a href="#projects-title">PROJECT</a>
-          <a href="#etc">@@@</a>
-      </nav>
+    <div class="logo">HI - RAN</div>
+    <nav>
+      <a href="#profile">PROFILE</a>
+      <a href="#projects">PROJECT</a>
+      <a href="#etc">@@@</a>
+    </nav>
   </header>
 
-<!-- 프로필 섹션 -->
-<section id="profile">
-<div class="profile-card">
-  <div class="profile-left">
-    <img class="profile-image-placeholder" src="img/profile.png">
-    <div class="profile-details">
-      <h3 class="profile-name">김해란</h3>
-    </div>
-  </div>
-
-  <div class="profile-right">
-    <h2 class="profile-heading">PROFILE</h2>
-    <div class="profile-stats">
-      <div class="stat-item">
-        <span class="stat-number">2</span>
-        <span class="stat-label">기획</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">2</span>
-        <span class="stat-label">운영</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">2</span>
-        <span class="stat-label">문서</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">1</span>
-        <span class="stat-label">데이터</span>
-      </div>
-    </div>
-
-    <div class="profile-content-rows">
-      <div class="content-row">
-        <div class="content-block large"></div>
-        <div class="content-block small"></div>
-        <div class="content-block small"></div>
-      </div>
-      <div class="content-row">
-        <div class="content-block large"></div>
-        <div class="content-block large"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="highlights">
-<div style="margin-bottom: 15px;">🌠 Highlights</div>
-<span class="hi-label">
-  • data-token-index data-token-index data-token-index data-token-index data-token-indexdata-token-index data-token-index
-</span>
-</div>
-</section>
-
-
-
-<!-- 프로젝트 섹션  -->
-<section  id="projects">
-  <div class="prj" id="projects-title" >🧩 Project</div>  
-<!-- 기획 파트  -->
-<div class="grid">
-  <article class="card left-top">
-      <div class="wide">
-        <div class="img"></div>
-        <div class="meta">
-          <div class="title">틀린그림찾기 <br>서비스 기획</div>
-          <div class="desc">서비스 기획에 대한 설명이 들어갑니다.</div>
-          <a class="btn" href="">더 알아보기 <span>➜</span></a>
+  <!-- 프로필 섹션 -->
+  <section id="profile">
+    <div class="profile-card">
+      <div class="profile-left">
+        <img class="profile-img" src="img/profile.png">
+        <div class="profile-name">
+          김해란
         </div>
       </div>
-    </article>
 
-    <!-- 데이터 파트 -->
-    <article class="card left-bottom">
-      <div class="wide">
-        <div class="img"></div>
-        <div class="meta">
-          <div class="title">데이터 추출 <br> 및 시각화</div>
-          <div class="desc">데이터 처리와 시각화 관련 설명</div>
-          <a class="btn" href="dat.html">더 알아보기 <span>➜</span></a>
+      <div class="profile-right">
+        <h2 class="profile-heading">PROFILE</h2>
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">기획</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">운영</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">문서</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1</span>
+            <span class="stat-label">데이터</span>
+          </div>
+        </div>
+
+        <div class="profile-content-rows">
+          <div class="content-row">
+            <div class="content-block large">ff</div>
+            <div class="content-block small"></div>
+            <div class="content-block small"></div>
+          </div>
+          <div class="content-row">
+            <div class="content-block large"></div>
+            <div class="content-block large"></div>
+          </div>
         </div>
       </div>
-    </article>
+    </div>
 
-    <!-- 운영 파트 -->
-    <article class="card right-right">
-      <div class="block">
-        <div class="thumb"></div>
-        <div class="title">카피라이팅</div>
-        <div class="desc">짧은 설명 텍스트</div>
+    <div class="highlights">
+      <div class="indexs">🌠 Highlights</div>
+      <span class="hi-label">
+        • data-token-index data-token-index data-token-index data-token-index data-token-indexdata-token-index
+        data-token-index
+      </span>
+    </div>
+  </section>
+
+
+
+  <!-- 프로젝트 섹션  -->
+  <section id="projects">
+    <div class="indexs">🧩 Project</div>
+    <!-- 기획 파트  -->
+    <div class="grid">
+      <article class="card pm">
+        <div class="wide">
+          <div class="thumb"><img class="prj-img" src="img/1.png"></div>
+          <div class="meta">
+            <div class="title">틀린그림찾기 <br>서비스 기획</div>
+            <div class="desc">서비스 기획에 대한 설명이 들어갑니다.</div>
+            <a class="btn" href="">더 알아보기 <span>➜</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 데이터 파트 -->
+      <article class="card dat">
+        <div class="wide">
+          <div class="thumb"><img class="prj-img" src="img/1.png"></div>
+          <div class="meta">
+            <div class="title">데이터 추출 <br> 및 시각화</div>
+            <div class="desc">데이터 처리와 시각화 관련 설명</div>
+            <a class="btn" href="dat.html">더 알아보기 <span>➜</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 운영 파트 -->
+      <article class="card copy">
+        <div class="long">
+        <div class="block">
+          <div class="thumb"><img class="prj-img" src="img/1.png"></div>
+          <div class="title">카피라이팅</div>
+          <div class="desc">짧은 설명 텍스트</div>
+        </div>
+        <div class="block">
+          <div class="thumb"><img class="prj-img" src="img/1.png"></div>
+          <div class="title">UX WRITING</div>
+          <div class="desc">짧은 설명 텍스트</div>
+        </div>
+        <a class="btn" href="newsletter.html">더 알아보기 <span>➜</span></a>
+        </div>
+      </article>
+
+      <!-- 문서파트 -->
+      <article class="card office">
+        <div class="long">
+        <div class="block">
+          <div class="thumb">
+            <img class="prj-img" src="img/1.png">
+          </div>
+          <div class="title">제안서 작성</div>
+          <div class="desc">짧은 설명 텍스트</div>
+        </div>
+        <div class="block">
+          <div class="thumb"><img class="prj-img" src="img/1.png"></div>
+          <div class="title">기능소개서 작성</div>
+          <div class="desc">짧은 설명 텍스트</div>
+        </div>
+        <a class="btn" href="">더 알아보기 <span>➜</span></a>
       </div>
-      <div class="block">
-        <div class="thumb"></div>
-        <div class="title">UX WRITING</div>
-        <div class="desc">짧은 설명 텍스트</div>
-      </div>
-      <a class="btn" href="newsletter.html">더 알아보기 <span>➜</span></a>
-    </article>
+      </article>
 
-    <!-- 문서파트 -->
-    <article class="card right-left">
-      <div class="block">
-        <div class="thumb"></div>
-        <div class="title">제안서 작성</div>
-        <div class="desc">짧은 설명 텍스트</div>
-      </div>
-      <div class="block">
-        <div class="thumb"></div>
-        <div class="title">기능소개서 작성</div>
-        <div class="desc">짧은 설명 텍스트</div>
-      </div>
-      <a class="btn" href="">더 알아보기 <span>➜</span></a>
-    </article>
+      <!-- 반응형 운영 문서 -->
+      <article class="card one">
+        <div class="wide">
+          <img class="prj-img" src="img/profile.png">
+          <div class="meta">
+            <div class="title">One</div>
+            <div class="desc">One 설명</div>
+            <a class="btn" href="">더 알아보기 <span>➜</span></a>
+          </div>
+        </div>
+      </article>
 
-    <!-- 반응형 운영 문서 -->
-  <article class="card one" >
-    <div class="wide">
-  <div class="img"></div>
-  <div class="meta">
-    <div class="title">One</div>
-    <div class="desc">One 설명</div>
-    <a class="btn" href="">더 알아보기 <span>➜</span></a>
-  </div>
-  </div>
-</article>
+      <article class="card two">
+        <div class="wide">
+          <img class="prj-img" src="img/profile.png">
+          <div class="meta">
+            <div class="title">Two</div>
+            <div class="desc">Two 설명</div>
+            <a class="btn" href="">더 알아보기 <span>➜</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
 
-<article class="card two">
-  <div class="wide">
-  <div class="img"></div>
-  <div class="meta">
-    <div class="title">Two</div>
-    <div class="desc">Two 설명</div>
-    <a class="btn" href="">더 알아보기 <span>➜</span></a>
-  </div>
-  </div>
-</article>
-</div>
-
-</section>
+  </section>
 
 
 
 
 </body>
+
 </html>
