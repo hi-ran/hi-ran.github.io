@@ -6,7 +6,7 @@ body {
 }
 
 section {
-    padding: 5% 15% 5% 15%;
+    padding: 5% 15%;
     scroll-margin-top: 60px;
 }
 
@@ -26,10 +26,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
+    padding: 2vh 5vh;
     position: sticky;
     top: 0;
     z-index: 1000;
+    height:5vh;
 }
 
 .logo {
@@ -40,13 +41,47 @@ header {
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin: 0 20px;
     font-weight: bold;
     font-size: 20px;
 }
 
 nav a:hover {
     color: #DFAAA9;
+}
+
+/* 드롭다운*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 내용 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2d3e50;
+  min-width: 100%;
+  border-radius: 6px;
+}
+
+/* 드롭다운 내부 링크 */
+.dropdown-content a {
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #3f5168;
+  color: #DFAAA9;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 
@@ -240,8 +275,6 @@ nav a:hover {
 .block .desc {font-size: 13px; color: #555}
 
 
-
-
 /* 버튼 */
 .btn {
     background: #283286;
@@ -264,7 +297,7 @@ nav a:hover {
 
 .card .btn {
     padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 16px);
-    font-size: clamp(12px, 1.5vw, 16px);
+    font-size: clamp(10px, 1.5vw, 16px);
 }
 
 article:hover .btn {
@@ -272,16 +305,25 @@ article:hover .btn {
     transform: translateY(-3px);
 }
 
-
-
 .one,
 .two {
     display: none;
-    /* 기본 숨김 */
 }
 
 
 /* 반응형 */
+@media (min-width: 2500px) {
+    section {
+    padding: 5% 20%;
+    scroll-margin-top: 60px;
+    }
+
+    .logo, .nav a{font-size: clamp(30px, 3vw, 45px); }
+    .stat-number{ font-size: clamp(35px, 3vw, 50px); }
+    .stat-label{ font-size: clamp(20px, 1vw, 35px); }
+    .profile-heading{ font-size: clamp(40px, 2vw, 70px); }
+}
+
 @media (max-width: 900px) {
     .profile-image-placeholder {
         width: 100%;
