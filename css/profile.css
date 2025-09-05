@@ -6,16 +6,16 @@ body {
 }
 
 section {
-    padding: 5% 15%;
-    scroll-margin-top: 60px;
+    padding: 5% 20%;
+    scroll-margin-top: 6vh;
 }
 
 /* 인덱스 */
 .indexs {
-    font-size: 35px;
+    font-size: 4vh;
     font-weight: 700;
     color: #37352F;
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
 }
 
 
@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh 5vh;
+    padding: 2vh 6vh;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -35,15 +35,20 @@ header {
 
 .logo {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 4vh;
+}
+
+nav, .dropdown {
+    display: flex;           
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 2vh;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2.5vh;
 }
 
 nav a:hover {
@@ -52,8 +57,9 @@ nav a:hover {
 
 /* 드롭다운*/
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: flex;        
+    align-items: center;
 }
 
 /* 드롭다운 내용 */
@@ -62,16 +68,16 @@ nav a:hover {
   position: absolute;
   background-color: #2d3e50;
   min-width: 100%;
-  border-radius: 6px;
+  top: 100%;
 }
 
 /* 드롭다운 내부 링크 */
 .dropdown-content a {
   color: white;
-  padding: 10px 20px;
+  padding: 2vh 2vh;
   margin: 0;
   display: block;
-  font-size: 20px;
+  font-size: 2.5vh;
   text-align: center;
 }
 
@@ -89,31 +95,33 @@ nav a:hover {
 .profile-card {
     display: flex;
     overflow: hidden;
-    padding: 30px;
-    margin-bottom: 50px;
+    min-height: 30vh;
+    padding: 4vh;
+    margin-bottom: 5vh;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 1.5vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .profile-left {
     display: flex;
-    /* flex: 0 0 250px; */
+    flex: 0 0 30%;
     flex-direction: column;
-    padding-right: 30px;
+    padding-right: 4vh;
+
 }
 
 .profile-img {
+    flex: 0 0 90%;
     width: 100%;
-    height: auto;
-    max-width: 250px;
+    /* max-height: 30vh; */
 }
 
 .profile-name {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2vh;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 2vh;
     color: #333;
 }
 
@@ -121,35 +129,34 @@ nav a:hover {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding-left: 30px;
 }
 
 .profile-heading {
-    font-size: 40px;
+    font-size: 5vh;
     text-align: center;
     color: #2C3E50;
     margin-top: 0;
-    /* margin-bottom: 30px; */
 }
 
 .profile-stats {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 35px;
+    max-height: 30%;
+    padding-bottom: 3vh;
     text-align: center;
 }
 
 .stat-number {
-    font-size: 35px;
+    font-size: 4vh;
     font-weight: bold;
     color: #333;
     display: block;
     line-height: 1;
-    padding-bottom: 5px;
+    padding-bottom: 0.5vh;
 }
 
 .stat-label {
-    font-size: 20px;
+    font-size: 2vh;
     font-weight: 500;
     color: #888;
 }
@@ -157,19 +164,19 @@ nav a:hover {
 .profile-content-rows {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5vh;
     margin-top: auto;
 }
 
 .content-row {
     display: flex;
-    gap: 10px;
+    gap: 1vh;
 }
 
 .content-block {
     background-color: #f0f0f0;
-    border-radius: 6px;
-    height: 40px;
+    border-radius: 1vh;
+    min-height: 4vh;
 }
 
 .content-block.large {
@@ -178,7 +185,7 @@ nav a:hover {
 
 .content-block.small {
     flex: 1;
-}
+} 
 
 .hi-label {
     font-size: 25px;
@@ -310,101 +317,3 @@ article:hover .btn {
     display: none;
 }
 
-
-/* 반응형 */
-@media (min-width: 2500px) {
-    section {
-    padding: 5% 20%;
-    scroll-margin-top: 60px;
-    }
-
-    .logo, .nav a{font-size: clamp(30px, 3vw, 45px); }
-    .stat-number{ font-size: clamp(35px, 3vw, 50px); }
-    .stat-label{ font-size: clamp(20px, 1vw, 35px); }
-    .profile-heading{ font-size: clamp(40px, 2vw, 70px); }
-}
-
-@media (max-width: 900px) {
-    .profile-image-placeholder {
-        width: 100%;
-    }
-
-    .profile-left {
-        flex: 0 0 40%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .profile-right {
-        display: block;
-        /* 숨기지 않음 */
-        flex: 1 1 60%;
-        /* 우측 영역 나머지 70% */
-    }
-
-    .hi-label {
-        display: -webkit-box;
-        /* flexbox 기반이 아닌 다중줄 클램프용 */
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        /* 최대 2줄 */
-        overflow: hidden;
-        /* 넘치는 내용 숨김 */
-        text-overflow: ellipsis;
-        /* 끝에 … 표시 */
-        line-height: 1.3;
-    }
-
-    .right-left,
-    .right-right {
-        display: none;
-        /* 중간 크기 화면에서 숨기기 */
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 15px;
-    }
-
-    .left-top {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .one {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        /* wide 구조이므로 flex 유지 */
-    }
-
-    .left-bottom {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .two {
-        grid-column: 2;
-        grid-row: 2;
-        display: flex;
-    }
-}
-
-@media (max-width: 600px) {
-    header nav {
-        display: none;
-    }
-
-    .profile-left {
-        display: none;
-        /* 왼쪽 프로필 이미지 숨김 */
-    }
-
-    .profile-right {
-        padding: 0%;
-        flex: 1 1 100%;
-        /* 오른쪽 영역을 전체 폭으로 확장 */
-    }
-}
