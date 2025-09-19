@@ -15,7 +15,7 @@ section {
     font-size: 3rem;
     font-weight: 700;
     color: #37352F;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 /* GNB */
@@ -25,17 +25,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 1rem 4rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    min-height: 60px;
+    min-height: 3rem;
 }
 
 .logo {
     font-weight: bold;
     font-size: 2rem;
-    padding-left: 80px;
+    padding-left: 70px;
 }
 
 nav, .dropdown {
@@ -93,7 +93,7 @@ nav a:hover {
     display: flex;
     overflow: hidden;
     min-height: 280px;
-    padding: 30px;
+    padding: 3rem;
     margin-bottom: 4rem;
     background-color: #fff;
     border-radius: 12px;
@@ -103,7 +103,7 @@ nav a:hover {
 .profile-left {
     display: flex;
     flex: 0 0 30%;
-    padding-right: 30px;
+    padding-right: 3rem;
 } 
 
 .profile-img {
@@ -119,16 +119,19 @@ nav a:hover {
 }
 
 .profile-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     color: #2C3E50;
-    margin-top: 0;
+    margin: 0;
+    /* margin-bottom: 2rem; */
 }
 
 .profile-stats {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* padding-bottom: 2rem; */
     text-align: center;
 }
 
@@ -156,7 +159,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .content-row {
@@ -167,7 +170,7 @@ nav a:hover {
 .content-block {
     background-color: #f0f0f0;
     border-radius: 8px;
-    min-height: 50px;
+    min-height: 2.5rem;
 }
 
 .content-block.large {
@@ -179,8 +182,16 @@ nav a:hover {
 }  
 
 .hi-label {
-    font-size: 2rem;
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;    
     color: #37352F;
+    width: 100%;
+}
+
+.spot{
+     color: #FF5733; 
+  font-weight: bold;
 }
 
 /* 프로젝트 */
@@ -216,6 +227,7 @@ padding-top: 0;
 .wide {
     display: flex;
     height: auto;
+    width: 100%;
     gap: 10px;
     overflow: hidden;
 }
@@ -246,7 +258,7 @@ padding-top: 0;
 
 .wide .desc {
     color: #6b7280;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 /* 세로 카드*/
@@ -254,6 +266,7 @@ padding-top: 0;
     display: flex;
     flex-direction: column;
     height: auto;
+    width: 100%;
     gap: 10px;
 } 
 
@@ -281,8 +294,8 @@ padding-top: 0;
     border-radius: 5px;
 }
 
-.block .title {font-weight: 700; margin-top: 8px;}
-.block .desc {font-size: 12px; color: #555}
+.block .title {font-weight: 700; margin-top: 8px; margin-bottom: 2px;}
+.block .desc {font-size: 0.8rem; color: #555; overflow: hidden;}
 
 /* 버튼 */
 .btn {
@@ -316,17 +329,57 @@ article:hover .btn {
 }
 
 /* 반응형 */
-@media (max-width: 1050px) {
-    .profile-left {
-        flex: 0 0 40%;
-        display: flex;
-        justify-content: center;
+
+@media (max-width: 700px) {
+    header nav {
+        display: none;
     }
 
-    .profile-right {
-        display: block;
-        flex: 1 1 60%;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 15px;
+        width: 100%;
     }
+
+    .pm  { grid-column: 1; grid-row: 1; }
+    .dat { grid-column: 1; grid-row: 2; }
+    .one { grid-column: 1; grid-row: 3; display: flex; }
+    .two { grid-column: 1; grid-row: 4; display: flex; }
+}
+
+
+@media (max-width: 1050px) {
+    .profile-card {
+        display: flex;             
+        flex-direction: column;   
+        align-items: center;       
+        min-height: 500px;            
+        width: 100%;
+        padding: 2rem;   
+           gap: 2rem;            
+    }
+
+    .profile-left {
+        padding: 0;
+        height: 40%;                
+    }
+
+
+    .profile-heading {display: none;}
+
+    .profile-right { 
+        gap: 20px;
+  
+        height: 60%;              
+    width: 100%;              
+    box-sizing: border-box; 
+
+    }
+
+
+
 
     .hi-label {
         display: -webkit-box;
@@ -356,43 +409,31 @@ article:hover .btn {
     .wide {
         display: flex;
         flex-direction: column;
-        /* flex: 1 1 0;  */
+        min-height: auto;
+    }
+    .pm .prj-img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .card{flex: 0 1 auto;
+        min-height: 50px ;
     }
 
-    .one {
-     
-        display: flex;
-    }
+    .one, .two {display: flex; }
 
-    .two {
-       
-        display: flex;
-    }
+
+    
 }
 
-@media (max-width: 700px) {
-    header nav {
-        display: none;
-    }
 
-    .profile-left {
-        display: none;
-    }
 
-    .profile-right {
-        padding: 0;
-        flex: 1 1 100%;
+@media (min-width: 2100px) {
+    html {
+        font-size: 150%; 
     }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        gap: 15px;
+     .content-block {
+        min-height: 2.5rem; 
     }
-
-    .pm  { grid-column: 1; grid-row: 1; }
-    .dat { grid-column: 1; grid-row: 2; }
-    .one { grid-column: 1; grid-row: 3; display: flex; }
-    .two { grid-column: 1; grid-row: 4; display: flex; }
+    
+   
 }
